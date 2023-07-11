@@ -1,7 +1,13 @@
+:root {
+    --primary-clr: rgb(220, 220, 220);
+    --secondary-clr: rgb(139, 139, 139);
+    --hover-clr: rgb(196, 196, 196);
+}
+
 html, body {
     margin: 0;
     padding: 0;
-    background: rgb(220, 220, 220);
+    background: var(--primary-clr);
     font-family: 'Montserrat', sans-serif;
     overscroll-behavior: none;
 }
@@ -11,7 +17,7 @@ html, body {
 }
 
 .header {
-    background: rgb(139, 139, 139);
+    background: var(--secondary-clr);
     padding: 20px 50px;
     font-size: 4rem;
     font-weight: bolder;
@@ -45,8 +51,8 @@ html, body {
 }
 
 .game .game-grid .game-cell {
-    background-color: rgb(220, 220, 220);
-    font-size: 100px;
+    background-color: var(--primary-clr);
+    font-size: 130px;
     text-align: center;
     justify-self: center;
     user-select: none;
@@ -55,14 +61,18 @@ html, body {
 }
 
 .game .game-grid .game-cell:hover {
-    background-color: rgb(220, 220, 220);
+    background-color: var(--hover-clr);
 }
 
 .game .game-dialog {
-    padding: 50px 0px;
+    padding: 20px 0px;
     display: flex;
     justify-content: center;
     align-items: center;
+    justify-self: center;
     gap: 10px;
     font-size: 2.5rem;
+    background-color: var(--secondary-clr);
+    border-radius: 50px;
+    width: 470px;
 }

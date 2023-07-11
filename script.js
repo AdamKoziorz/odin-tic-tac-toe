@@ -32,9 +32,9 @@ const gameBoard = (() => {
 
 
 
-// "Game Controller" module for Tic Tac Toe
-// This should be responsible for communicating with the game logic handling cell clicks in accord
-const gameController = (() => {
+// "Game Model" module for Tic Tac Toe
+// This should be responsible for implementing the game logic
+const gameModel = (() => {
     const playerOne = Player("X");
     const playerTwo = Player("O");
     let round = 1;
@@ -69,6 +69,7 @@ const gameController = (() => {
             isOver = true;
         } else if (round === 9) {
             displayController.updateDialog("Draw!");
+            isOver = true;
         } else {
             round++;
             currentPlayer = round % 2 === 0 ? playerTwo : playerOne;
@@ -86,8 +87,7 @@ const gameController = (() => {
 
 
 // "Display Controller" module for Tic Tac Toe
-// This should be responsible for reacting to the cell clicks and changing the view,
-// including the dialog span
+// This should be responsible for handling user interaction and output
 const displayController = (() => {
     const cells = document.querySelectorAll(".game-cell");
     const dialog = document.getElementById("dialog");
