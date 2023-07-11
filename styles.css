@@ -1,0 +1,68 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background: rgb(220, 220, 220);
+    font-family: 'Montserrat', sans-serif;
+    overscroll-behavior: none;
+}
+
+.container {
+    display: grid;
+}
+
+.header {
+    background: rgb(139, 139, 139);
+    padding: 20px 50px;
+    font-size: 4rem;
+    font-weight: bolder;
+    color: black;
+    text-align: center;
+}
+
+.game {
+    display: grid;
+    grid-template-rows: 5 1;
+}
+
+.game .game-grid-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 50px 0px;
+}
+
+.game .game-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 470px;
+    height: 470px;
+    gap: 10px;
+    background-color: black;
+    
+}
+
+.game .game-grid .game-cell {
+    background-color: rgb(220, 220, 220);
+    font-size: 100px;
+    text-align: center;
+    justify-self: center;
+    user-select: none;
+    width: 150px;
+    height: 150px;
+}
+
+.game .game-grid .game-cell:hover {
+    background-color: rgb(220, 220, 220);
+}
+
+.game .game-dialog {
+    padding: 50px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 2.5rem;
+}
