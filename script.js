@@ -94,8 +94,8 @@ const displayController = (() => {
 
     cells.forEach((cell =>
         cell.addEventListener("click", (e) => {
-            if ((!gameController.getIsOver()) && e.target.textContent === "") {
-                gameController.playRound(parseInt(e.target.dataset.index));
+            if ((!gameModel.getIsOver()) && e.target.textContent === "") {
+                gameModel.playRound(parseInt(e.target.dataset.index));
                 updateGrid();
             }
     })));
