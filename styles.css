@@ -1,7 +1,7 @@
 :root {
     --primary-clr: rgb(220, 220, 220);
     --secondary-clr: rgb(139, 139, 139);
-    --hover-clr: rgb(196, 196, 196);
+    --hover-clr: rgb(206, 206, 206);
 }
 
 html, body {
@@ -33,11 +33,44 @@ html, body {
 .game .game-grid-wrapper {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     position: relative;
     width: 100%;
     height: auto;
     padding: 50px 0px;
+    gap: 80px;
+}
+
+.game .status {
+    background-color: var(--secondary-clr);
+    padding: 20px;
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.game .status .icon {
+    font-weight: bolder;
+    text-align: center;
+    font-size: 3.5rem;
+    user-select: none;
+}
+
+.game .status .score {
+    background-color: var(--primary-clr);
+    height: 50px;
+    width: 80px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 2.5rem;
+    user-select: none;
+}
+
+.game .status .score#o-score {
+    margin-right: 10px;
 }
 
 .game .game-grid {
@@ -64,7 +97,14 @@ html, body {
     background-color: var(--hover-clr);
 }
 
-.game .game-dialog {
+.game .turns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.game .turns #dialog {
     padding: 20px 0px;
     display: flex;
     justify-content: center;
@@ -74,5 +114,19 @@ html, body {
     font-size: 2.5rem;
     background-color: var(--secondary-clr);
     border-radius: 50px;
-    width: 470px;
+    width: 360px;
+    user-select: none;
+}
+
+.game .turns #restart-btn {
+    height: 90px;
+    width: 90px;
+    content: "ok";
+    background-color: var(--primary-clr);
+    background-image: url('data:image/svg+xml;charset=utf-8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>Restart</title><path d="M12.5,8C9.85,8 7.45,9 5.6,10.6L2,7V16H11L7.38,12.38C8.77,11.22 10.54,10.5 12.5,10.5C16.04,10.5 19.05,12.81 20.1,16L22.47,15.22C21.08,11.03 17.15,8 12.5,8Z" /></svg>');
+    background-size: 60px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50px;
+    border: solid 8px var(--secondary-clr);
 }

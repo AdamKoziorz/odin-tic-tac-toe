@@ -17,6 +17,10 @@
         </div>
         <div class="game">
             <div class="game-grid-wrapper">
+                <div class="status">
+                    <span class="status-text icon">X</span>
+                    <span class="status-text score" id="x-score">0</span>
+                </div>
                 <div class="game-grid">
                     <div class="game-cell" data-index="0"></div>
                     <div class="game-cell" data-index="1"></div>
@@ -28,9 +32,14 @@
                     <div class="game-cell" data-index="7"></div>
                     <div class="game-cell" data-index="8"></div>
                 </div>
+                <div class="status">
+                    <span class="status-text score" id="o-score">0</span>
+                    <span class="status-text icon">O</span>
+                </div>
             </div>
-            <div class="game-dialog">
+            <div class="turns">
                 <span id="dialog">Player X's Turn</span>
+                <button id="restart-btn"></button>
             </div>
         </div>
     </div>
